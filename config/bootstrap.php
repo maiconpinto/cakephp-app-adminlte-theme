@@ -191,6 +191,8 @@ Request::addDetector('tablet', function ($request) {
  */
 
 Plugin::load('Migrations');
+Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);
+
 
 // Only try to load DebugKit in development mode
 // Debug Kit should not be installed on a production system
@@ -219,3 +221,16 @@ Type::build('date')
     ->useImmutable();
 Type::build('datetime')
     ->useImmutable();
+
+Configure::write('Theme', [
+    'title' => 'Maicon Pinto',
+    'logo' => [
+        'mini' => '<b>M</b>P',
+        'large' => '<b>Maicon</b>PINTO'
+    ],
+    'login' => [
+        'show_remember' => false,
+        'show_register' => false,
+        'show_social' => false
+    ]
+]);
