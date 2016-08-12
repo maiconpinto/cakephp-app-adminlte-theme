@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3475f03b6fae515a782ee8ac032bcd6a",
-    "content-hash": "7552012af70ebc78d69b8919cca8f378",
+    "hash": "9dd56aa988cb44092d88bf60cea9cc3c",
+    "content-hash": "66105176f8fa097e766b2c2d9084c0b8",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -345,16 +345,16 @@
         },
         {
             "name": "maiconpinto/cakephp-adminlte-theme",
-            "version": "1.0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maiconpinto/cakephp-adminlte-theme.git",
-                "reference": "9560e512895546ea6e9a18819f75c5012d0d319d"
+                "reference": "e099030d7cc348dc9ebbf920120d454a741cc18e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maiconpinto/cakephp-adminlte-theme/zipball/9560e512895546ea6e9a18819f75c5012d0d319d",
-                "reference": "9560e512895546ea6e9a18819f75c5012d0d319d",
+                "url": "https://api.github.com/repos/maiconpinto/cakephp-adminlte-theme/zipball/e099030d7cc348dc9ebbf920120d454a741cc18e",
+                "reference": "e099030d7cc348dc9ebbf920120d454a741cc18e",
                 "shasum": ""
             },
             "require": {
@@ -389,7 +389,7 @@
                 "plugin",
                 "templates"
             ],
-            "time": "2016-05-24 16:48:12"
+            "time": "2016-07-27 18:11:22"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -1278,6 +1278,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "maiconpinto/cakephp-adminlte-theme": 20,
         "psy/psysh": 0
     },
     "prefer-stable": true,
