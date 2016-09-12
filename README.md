@@ -8,5 +8,5 @@ CakePHP app example for AdminLTE Theme
 
 For more information:
 
-maiconpinto.github.io/cakephp-app-adminlte-theme
+[maiconpinto.github.io/cakephp-app-adminlte-theme](https://maiconpinto.github.io/cakephp-app-adminlte-theme/)
 
