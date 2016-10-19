@@ -11,6 +11,27 @@ use App\Controller\AppController;
 class UsersController extends AppController
 {
 
+    public function isAuthorized($user)
+    {
+        $action = $this->request->params['action'];
+
+        // The add and index actions are always allowed.
+        if (in_array($action, ['index', 'add'])) {
+            return true;
+        }
+        // All other actions require an id.
+        if (empty($this->request->params['pass'][0])) {
+            return false;
+        }
+
+        // Check that the user is the current user.
+        if ($this->request->params['pass'][0] != $this->Auth->user('id')) {
+            return false;
+        }
+
+        return parent::isAuthorized($user);
+    }
+
     /**
      * Index method
      *
