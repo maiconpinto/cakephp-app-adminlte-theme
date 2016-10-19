@@ -57,7 +57,9 @@ class AppController extends Controller
             'loginAction' => [
                 'controller' => 'Users',
                 'action' => 'login'
-            ]
+            ],
+            'authorize'=> 'Controller',
+            'unauthorizedRedirect' => $this->referer()
         ]);
 
         // Allow the display action so our pages controller
@@ -82,5 +84,10 @@ class AppController extends Controller
         $this->viewBuilder()->theme('AdminLTE');
 
         $this->set('theme', Configure::read('Theme'));
+    }
+    
+    public function isAuthorized($user)
+    {
+        return false;
     }
 }
