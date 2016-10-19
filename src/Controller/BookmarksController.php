@@ -146,7 +146,7 @@ class BookmarksController extends AppController
         // Use the BookmarksTable to find tagged bookmarks.
         $bookmarks = $this->Bookmarks->find('tagged', [
             'tags' => $tags
-        ]);
+        ])->where(['user_id' => $this->Auth->user('id')]);
 
         // Pass variables into the view template context.
         $this->set([
