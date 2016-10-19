@@ -1,43 +1,40 @@
 <section class="content-header">
   <h1>
-    Bookmark
-    <small><?= __('View') ?></small>
+    <?php echo __('Bookmark'); ?>
   </h1>
   <ol class="breadcrumb">
     <li>
-    <?= $this->Html->link('<i class="fa fa-dashboard"></i> '.__('Back'), ['action' => 'index'], ['escape' => false]) ?>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
     </li>
   </ol>
 </section>
 
 <!-- Main content -->
 <section class="content">
-  <div class="row">
-    <!-- left column -->
-    <div class="col-md-12">
-      <!-- general form elements -->
-      <div class="box box-primary">
-        <div class="box-header with-border">
-          <h3 class="box-title"><?= __('Form') ?></h3>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-solid">
+                <div class="box-header with-border">
+                    <i class="fa fa-text-width"></i>
+                    <h3 class="box-title"><?php echo __('Information'); ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <dl class="dl-horizontal">
+                    <dt><?= __('User') ?></dt>
+                    <dd><?= $bookmark->has('user') ? $bookmark->user->id : '' ?></dd>
+                    <dt><?= __('Title') ?></dt>
+                    <dd><?= h($bookmark->title) ?></dd>
+                    <dt><?= __('Description') ?></dt>
+                    <dd><?= $this->Text->autoParagraph(h($bookmark->description)); ?></dd>
+                    <dt><?= __('Url') ?></dt>
+                    <dd><?= $this->Text->autoParagraph(h($bookmark->url)); ?></dd>
+                    </dl>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
         </div>
-        <!-- /.box-header -->
-        <!-- form start -->
-        <?= $this->Form->create($bookmark, array('role' => 'form')) ?>
-          <div class="box-body">
-          <?php
-            echo $this->Form->input('user_id', ['options' => $users, $bookmark->user_id, 'disabled' => true]);
-            echo $this->Form->input('title', ['placeholder' => $bookmark->title, 'disabled' => true]);
-            echo $this->Form->input('description', ['placeholder' => $bookmark->description, 'disabled' => true]);
-            echo $this->Form->input('url', ['placeholder' => $bookmark->url, 'disabled' => true]);
-            echo $this->Form->input('tags._ids', ['options' => $tags]);
-          ?>
-          </div>
-          <!-- /.box-body -->
-          <div class="box-footer">
-            <?= $this->Form->button(__('Save')) ?>
-          </div>
-        <?= $this->Form->end() ?>
-      </div>
+        <!-- ./col -->
     </div>
-  </div>
 </section>
