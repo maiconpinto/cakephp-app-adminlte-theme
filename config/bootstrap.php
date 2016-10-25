@@ -232,5 +232,6 @@ Configure::write('Theme', [
         'show_remember' => false,
         'show_register' => false,
         'show_social' => false
-    ]
+    ],
+    'folder' => ROOT
 ]);
