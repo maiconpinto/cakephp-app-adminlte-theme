@@ -15,7 +15,7 @@
           <h3 class="box-title"><?= __('List of') ?> Bookmarks</h3>
           <div class="box-tools">
             <form action="<?php echo $this->Url->build(); ?>" method="POST">
-              <div class="input-group input-group-sm">
+              <div class="input-group input-group-sm"  style="width: 180px;">
                 <input type="text" name="search" class="form-control" placeholder="<?= __('Fill in to start search') ?>">
                 <span class="input-group-btn">
                 <button class="btn btn-info btn-flat" type="submit"><?= __('Filter') ?></button>
@@ -29,19 +29,18 @@
           <table class="table table-hover">
             <tr>
               <th><?= $this->Paginator->sort('id') ?></th>
+              <th><?= $this->Paginator->sort('user_id') ?></th>
               <th><?= $this->Paginator->sort('title') ?></th>
-              <th><?= $this->Paginator->sort('created') ?></th>
-              <th><?= $this->Paginator->sort('modified') ?></th>
               <th><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($bookmarks as $bookmark): ?>
               <tr>
                 <td><?= $this->Number->format($bookmark->id) ?></td>
+                <td><?= $bookmark->has('user') ? $this->Html->link($bookmark->user->id, ['controller' => 'Users', 'action' => 'view', $bookmark->user->id]) : '' ?></td>
                 <td><?= h($bookmark->title) ?></td>
-                <td><?= h($bookmark->created) ?></td>
-                <td><?= h($bookmark->modified) ?></td>
                 <td class="actions" style="white-space:nowrap">
-                  <?= $this->Html->link(__('Edit'), ['action' => 'edit', $bookmark->id], ['class'=>'btn btn-primary btn-xs']) ?>
+                  <?= $this->Html->link(__('View'), ['action' => 'view', $bookmark->id], ['class'=>'btn btn-info btn-xs']) ?>
+                  <?= $this->Html->link(__('Edit'), ['action' => 'edit', $bookmark->id], ['class'=>'btn btn-warning btn-xs']) ?>
                   <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $bookmark->id], ['confirm' => __('Confirm to delete this entry?'), 'class'=>'btn btn-danger btn-xs']) ?>
                 </td>
               </tr>
