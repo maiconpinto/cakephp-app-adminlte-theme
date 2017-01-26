@@ -233,5 +233,6 @@ Configure::write('Theme', [
         'show_register' => false,
         'show_social' => false
     ],
-    'folder' => ROOT
+    'folder' => ROOT,
+    'skin' => 'green'
 ]);

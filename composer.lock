@@ -350,12 +350,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/maiconpinto/cakephp-adminlte-theme.git",
-                "reference": "8e74df46f4a0be51eb5435908b5d494b683ce069"
+                "reference": "a6ccf19ae14d6d59d04157992f9b2f8b190ca6ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maiconpinto/cakephp-adminlte-theme/zipball/8e74df46f4a0be51eb5435908b5d494b683ce069",
-                "reference": "8e74df46f4a0be51eb5435908b5d494b683ce069",
+                "url": "https://api.github.com/repos/maiconpinto/cakephp-adminlte-theme/zipball/a6ccf19ae14d6d59d04157992f9b2f8b190ca6ef",
+                "reference": "a6ccf19ae14d6d59d04157992f9b2f8b190ca6ef",
                 "shasum": ""
             },
             "require": {
@@ -390,7 +390,7 @@
                 "plugin",
                 "templates"
             ],
-            "time": "2016-10-26 16:42:45"
+            "time": "2017-01-26 15:04:37"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
