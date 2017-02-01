@@ -20,7 +20,9 @@ class UsersSeed extends AbstractSeed
     {
         $data = [
             'email' => 'admin@admin.com',
-            'password' => 'admin'
+            'password' => 'admin',
+            'created' => date('Y-m-d'),
+            'modified' => date('Y-m-d')
         ];
 
         $table = $this->table('users');
