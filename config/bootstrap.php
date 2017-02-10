@@ -236,3 +236,6 @@ Configure::write('Theme', [
     'folder' => ROOT,
     'skin' => 'green'
 ]);
+
+Plugin::load('SupportTicket', ['routes' => true]);
+

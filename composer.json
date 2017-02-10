@@ -10,7 +10,8 @@
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
-        "maiconpinto/cakephp-adminlte-theme": "dev-master"
+        "maiconpinto/cakephp-adminlte-theme": "dev-master",
+        "maiconpinto/cakephp-support-ticket-plugin": "dev-master"
     },
     "require-dev": {
         "psy/psysh": "@stable",

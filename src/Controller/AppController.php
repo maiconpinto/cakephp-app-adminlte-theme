@@ -55,6 +55,8 @@ class AppController extends Controller
                 ]
             ],
             'loginAction' => [
+                'plugin' => false,
+                'prefix' => false,
                 'controller' => 'Users',
                 'action' => 'login'
             ],
