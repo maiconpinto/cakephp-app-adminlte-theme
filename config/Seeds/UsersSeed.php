@@ -1,5 +1,6 @@
 <?php
 use Migrations\AbstractSeed;
+use Cake\Auth\DefaultPasswordHasher;
 
 /**
  * Users seed.
@@ -18,9 +19,13 @@ class UsersSeed extends AbstractSeed
      */
     public function run()
     {
+        $password = (new DefaultPasswordHasher())->hash('admin');
+
         $data = [
             'email' => 'admin@admin.com',
-            'password' => 'admin'
+            'password' => $password,
+            'created' => date('Y-m-d'),
+            'modified' => date('Y-m-d')
         ];
 
         $table = $this->table('users');
