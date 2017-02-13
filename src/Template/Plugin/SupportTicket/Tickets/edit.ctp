@@ -29,7 +29,7 @@
             echo $this->Form->input('description');
             echo $this->Form->input('status', ['options' => $ticket->status_options]);
             echo $this->Form->input('priority', ['options' => $ticket->priority_options]);
-            echo $this->Form->input('deadline', ['empty' => true, 'default' => '']);
+            echo $this->Form->input('deadline', ['empty' => true, 'default' => '', 'type' => 'text', 'id' => 'datemask']);
             echo $this->Form->input('cost');
           ?>
           </div>
@@ -42,3 +42,25 @@
     </div>
   </div>
 </section>
+
+<?php
+$this->Html->css([
+    'AdminLTE./plugins/daterangepicker/daterangepicker-bs3',
+  ],
+  ['block' => 'css']);
+
+$this->Html->script([
+  'AdminLTE./plugins/input-mask/jquery.inputmask',
+  'AdminLTE./plugins/input-mask/jquery.inputmask.date.extensions',
+  'AdminLTE./plugins/input-mask/jquery.inputmask.extensions',
+],
+['block' => 'script']);
+?>
+<?php $this->start('scriptBottom'); ?>
+<script>
+  $(function () {
+    //Datemask dd/mm/yyyy
+    $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+  });
+</script>
+<?php $this->end(); ?>
