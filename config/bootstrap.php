@@ -226,7 +226,7 @@ Configure::write('Theme', [
     'title' => 'Maicon Pinto',
     'logo' => [
         'mini' => '<b>M</b>P',
-        'large' => '<b>Maicon</b>PINTO'
+        'large' => '<b>Admin</b>LTE'
     ],
     'login' => [
         'show_remember' => false,
@@ -234,7 +234,7 @@ Configure::write('Theme', [
         'show_social' => false
     ],
     'folder' => ROOT,
-    'skin' => 'green'
+    'skin' => 'blue'
 ]);
 
 Plugin::load('SupportTicket', ['routes' => true]);
