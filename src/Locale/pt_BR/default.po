@@ -18,6 +18,9 @@ msgstr "Ações"
 msgid "Edit"
 msgstr "Editar"
 
+msgid "View"
+msgstr "Ver"
+
 msgid "Delete"
 msgstr "Excluir"
 
@@ -111,3 +114,6 @@ msgstr "Clique aqui para mudar o arquivo."
 
 msgid "Dashboard"
 msgstr "Painel"
+
+msgid "Support"
+msgstr "Suporte"
