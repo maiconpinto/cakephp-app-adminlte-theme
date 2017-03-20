@@ -21,36 +21,36 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <dl class="dl-horizontal">
-                    <dt><?= __('Name') ?></dt>
-                    <dd>
-                        <?= h($ticket->name) ?>
-                    </dd>
-
-
-                    <dt><?= __('Status') ?></dt>
-                    <dd>
-                        <?= $ticket->status_options[$ticket->status] ?>
-                    </dd>
-                    <dt><?= __('Priority') ?></dt>
-                    <dd>
-                        <?= $ticket->priority_options[$ticket->priority] ?>
-                    </dd>
-                    <dt><?= __('Cost') ?></dt>
-                    <dd>
-                        <?= $this->Number->format($ticket->cost) ?>
-                    </dd>
-
-                    <dt><?= __('Deadline') ?></dt>
-                    <dd>
-                        <?= h($ticket->deadline) ?>
-                    </dd>
-
-
-                    <dt><?= __('Description') ?></dt>
-                    <dd>
-                        <?= $this->Text->autoParagraph(h($ticket->description)); ?>
-                    </dd>
-                </dl>
+                                                                                                                <dt><?= __('Name') ?></dt>
+                                        <dd>
+                                            <?= h($ticket->name) ?>
+                                        </dd>
+                                                                                                                                    
+                                            
+                                                                                                                                                            <dt><?= __('Status') ?></dt>
+                                <dd>
+                                    <?= $this->Number->format($ticket->status) ?>
+                                </dd>
+                                                                                                                <dt><?= __('Priority') ?></dt>
+                                <dd>
+                                    <?= $this->Number->format($ticket->priority) ?>
+                                </dd>
+                                                                                                                <dt><?= __('Cost') ?></dt>
+                                <dd>
+                                    <?= $this->Number->format($ticket->cost) ?>
+                                </dd>
+                                                                                                
+                                                                                                                                                                                                                <dt><?= __('Deadline') ?></dt>
+                                <dd>
+                                    <?= h($ticket->deadline) ?>
+                                </dd>
+                                                                                                    
+                                            
+                                                                        <dt><?= __('Description') ?></dt>
+                            <dd>
+                            <?= $this->Text->autoParagraph(h($ticket->description)); ?>
+                            </dd>
+                                                            </dl>
             </div>
             <!-- /.box-body -->
         </div>

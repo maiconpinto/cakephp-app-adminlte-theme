@@ -39,8 +39,8 @@
               <tr>
                 <td><?= $this->Number->format($ticket->id) ?></td>
                 <td><?= h($ticket->name) ?></td>
-                <td><?= $ticket->status_options[$ticket->status] ?></td>
-                <td><?= $ticket->priority_options[$ticket->priority] ?></td>
+                <td><?= $this->Number->format($ticket->status) ?></td>
+                <td><?= $this->Number->format($ticket->priority) ?></td>
                 <td><?= h($ticket->deadline) ?></td>
                 <td class="actions" style="white-space:nowrap">
                   <?= $this->Html->link(__('View'), ['action' => 'view', $ticket->id], ['class'=>'btn btn-info btn-xs']) ?>

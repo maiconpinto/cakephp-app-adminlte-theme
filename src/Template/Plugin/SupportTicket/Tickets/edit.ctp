@@ -1,3 +1,8 @@
+<?php
+/**
+  * @var \App\View\AppView $this
+  */
+?>
 <section class="content-header">
   <h1>
     Ticket
@@ -27,9 +32,9 @@
           <?php
             echo $this->Form->input('name');
             echo $this->Form->input('description');
-            echo $this->Form->input('status', ['options' => $ticket->status_options]);
-            echo $this->Form->input('priority', ['options' => $ticket->priority_options]);
-            echo $this->Form->input('deadline', ['empty' => true, 'default' => '', 'type' => 'text', 'id' => 'datemask']);
+            echo $this->Form->input('status');
+            echo $this->Form->input('priority');
+            echo $this->Form->input('deadline', ['empty' => true, 'default' => '', 'class' => 'datepicker', 'type' => 'text']);
             echo $this->Form->input('cost');
           ?>
           </div>
@@ -42,8 +47,8 @@
     </div>
   </div>
 </section>
-
-<?php
+    
+        <?php
 $this->Html->css([
     'AdminLTE./plugins/datepicker/datepicker3',
   ],
@@ -61,7 +66,7 @@ $this->Html->script([
 <script>
   $(function () {
     //Datemask mm/dd/yyyy
-    $("#datemask")
+    $(".datepicker")
         .inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"})
         .datepicker({
             language:'en',
@@ -69,4 +74,4 @@ $this->Html->script([
         });
   });
 </script>
-<?php $this->end(); ?>
+<?php $this->end(); ?>        
