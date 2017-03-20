@@ -17,6 +17,7 @@ namespace App\Controller;
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 use Cake\Core\Configure;
+use Cake\I18n\I18n;
 
 /**
  * Application Controller
@@ -91,5 +92,18 @@ class AppController extends Controller
     public function isAuthorized($user)
     {
         return true;
+    }
+    
+    public function beforeFilter(Event $event) {
+        $lang = $this->request->session()->check('lang');
+        if ($lang) {
+            I18n::locale($this->request->session()->read('lang'));
+        }
+        
+        if (isset($this->request->query['lang'])) {
+            $lang = $this->request->query['lang'];
+            $this->request->session()->write('lang', $lang);
+            I18n::locale($lang);
+        }
     }
 }
