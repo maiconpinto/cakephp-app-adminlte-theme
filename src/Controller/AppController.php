@@ -45,7 +45,7 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-        
+
         $this->loadComponent('Auth', [
             'authenticate' => [
                 'Form' => [
@@ -85,21 +85,22 @@ class AppController extends Controller
         }
 
         $this->viewBuilder()->theme('AdminLTE');
+        $this->viewBuilder()->layout('AdminLTE.collapsed');
 
         $this->set('theme', Configure::read('Theme'));
     }
-    
+
     public function isAuthorized($user)
     {
         return true;
     }
-    
+
     public function beforeFilter(Event $event) {
         $lang = $this->request->session()->check('lang');
         if ($lang) {
             I18n::locale($this->request->session()->read('lang'));
         }
-        
+
         if (isset($this->request->query['lang'])) {
             $lang = $this->request->query['lang'];
             $this->request->session()->write('lang', $lang);

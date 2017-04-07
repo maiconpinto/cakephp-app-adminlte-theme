@@ -141,8 +141,8 @@
     <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
     <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
     <li class="header">CUSTOM PAGES</li>
-    <li><a href="<?php echo $this->Url->build('/pages/debug'); ?>"><i class="fa fa-bug"></i> Debug</a></li>
-    <li><a href="<?php echo $this->Url->build('/?lang=pt_BR'); ?>"><i class="fa fa-flag"></i> PT(BR)</a></li>
-    <li><a href="<?php echo $this->Url->build('/?lang=en_US'); ?>"><i class="fa fa-flag"></i> EN(US)</a></li>
-    <li><a href="<?php echo $this->Url->build(['plugin' => 'SupportTicket', 'controller' => 'Tickets']); ?>"><i class="fa fa-support"></i> <?php echo __('Support'); ?></a></li>
+    <li><a href="<?php echo $this->Url->build('/pages/debug'); ?>"><i class="fa fa-bug"></i> <span>Debug</span></a></li>
+    <li><a href="<?php echo $this->Url->build('/?lang=pt_BR'); ?>"><i class="fa fa-flag"></i> <span>PT(BR)</span></a></li>
+    <li><a href="<?php echo $this->Url->build('/?lang=en_US'); ?>"><i class="fa fa-flag"></i> <span>EN(US)</span></a></li>
+    <li><a href="<?php echo $this->Url->build(['plugin' => 'SupportTicket', 'controller' => 'Tickets']); ?>"><i class="fa fa-support"></i> <span><?php echo __('Support'); ?></span></a></li>
 </ul>

@@ -29,7 +29,7 @@
             echo $this->Form->input('description');
             echo $this->Form->input('status');
             echo $this->Form->input('priority');
-            echo $this->Form->input('deadline', ['empty' => true, 'default' => '', 'class' => 'datepicker', 'type' => 'text']);
+            echo $this->Form->input('deadline', ['empty' => true, 'default' => '', 'class' => 'datepicker form-control', 'type' => 'text']);
             echo $this->Form->input('cost');
           ?>
           </div>
@@ -42,7 +42,7 @@
     </div>
   </div>
 </section>
-    
+
         <?php
 $this->Html->css([
     'AdminLTE./plugins/datepicker/datepicker3',
@@ -69,4 +69,4 @@ $this->Html->script([
         });
   });
 </script>
-<?php $this->end(); ?>        
+<?php $this->end(); ?>
