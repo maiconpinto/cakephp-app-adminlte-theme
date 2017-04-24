@@ -86,8 +86,6 @@ class AppController extends Controller
 
         $this->viewBuilder()->theme('AdminLTE');
         $this->viewBuilder()->layout('AdminLTE.collapsed');
-
-        $this->set('theme', Configure::read('Theme'));
     }
 
     public function isAuthorized($user)
