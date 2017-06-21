@@ -34,7 +34,7 @@
             echo $this->Form->input('description');
             echo $this->Form->input('status');
             echo $this->Form->input('priority');
-            echo $this->Form->input('deadline', ['empty' => true, 'default' => '', 'class' => 'datepicker', 'type' => 'text']);
+            echo $this->Form->input('deadline', ['empty' => true, 'default' => '', 'class' => 'datepicker', 'type' => 'text', 'value' => $ticket->deadline_br]);
             echo $this->Form->input('cost');
           ?>
           </div>
@@ -47,7 +47,7 @@
     </div>
   </div>
 </section>
-    
+
         <?php
 $this->Html->css([
     'AdminLTE./plugins/datepicker/datepicker3',
@@ -67,11 +67,11 @@ $this->Html->script([
   $(function () {
     //Datemask mm/dd/yyyy
     $(".datepicker")
-        .inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"})
+        .inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"})
         .datepicker({
-            language:'en',
-            format: 'mm/dd/yyyy'
+            language:'pt_br',
+            format: 'dd/mm/yyyy'
         });
   });
 </script>
-<?php $this->end(); ?>        
+<?php $this->end(); ?>
