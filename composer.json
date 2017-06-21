@@ -39,5 +39,13 @@
         "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Maicon Pinto",
+            "email": "maiconsilva.pinto@gmail.com",
+            "homepage": "http://maiconpinto.com.br",
+            "role": "Developer"
+        }
+    ]
 }
