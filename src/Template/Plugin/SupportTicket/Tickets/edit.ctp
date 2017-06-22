@@ -34,7 +34,7 @@
             echo $this->Form->input('description');
             echo $this->Form->input('status');
             echo $this->Form->input('priority');
-            echo $this->Form->input('deadline', ['empty' => true, 'default' => '', 'class' => 'datepicker', 'type' => 'text', 'value' => $ticket->deadline_br]);
+            echo $this->Form->input('deadline', ['empty' => true, 'default' => '', 'class' => 'datepicker form-control', 'type' => 'text', 'value' => $ticket->deadline_br]);
             echo $this->Form->input('cost');
           ?>
           </div>
